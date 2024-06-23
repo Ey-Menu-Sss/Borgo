@@ -1,5 +1,4 @@
 .contact-page {
-  background-color: rgb(238, 238, 238);
   .aloqa-container {
     padding: 4rem;
     display: flex;
@@ -95,6 +94,13 @@
       .img {
         display: none;
       }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .contact-page {
+    .aloqa-container {
+      padding: 2rem 0rem;
     }
   }
 }

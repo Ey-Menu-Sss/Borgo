@@ -8,9 +8,11 @@
   ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 
     .li {
+      white-space: nowrap;
       text-decoration: none;
       color: black;
       font-size: 20px;

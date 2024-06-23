@@ -215,6 +215,7 @@
   .profile-dashboard {
     .p_dash_container {
       .dashboard-container {
+        margin-left: 0;
         width: 100%;
         .user-informations {
           display: flex;
@@ -224,25 +225,40 @@
       }
     }
   }
-  .profile-favourites{
-    .p_favourites_container{
-      .favorites-dep{
+  .profile-favourites {
+    .p_favourites_container {
+      .favorites-dep {
+        margin-left: 0;
         width: 100%;
       }
     }
   }
-  .profile-approved{
-    .p_approved_container{
-      .approved-dep{
+  .profile-approved {
+    .p_approved_container {
+      .approved-dep {
+        margin-left: 0;
         width: 100%;
       }
     }
   }
-  .profile-pending{
-    .p_pending_container{
-      .pending-dep{
+  .profile-pending {
+    .p_pending_container {
+      .pending-dep {
+        margin-left: 0;
         width: 100%;
       }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .profile-dashboard,
+  .profile-approved,
+  .profile-pending,
+  .profile-favourites {
+    h1 {
+      font-size: 20px;
+      text-align: center;
     }
   }
 }
