@@ -1,0 +1,51 @@
+.footer {
+  padding: 2rem;
+  padding-bottom: 1rem;
+  background-color: #222;
+  color: white;
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    .f-logo {
+      p {
+        color: #999;
+      }
+    }
+    .social-madias {
+      div {
+        font-size: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        i {
+          cursor: pointer;
+          margin-top: 1rem;
+          margin-left: 1rem;
+        }
+        .insta:hover {
+          color: rgb(9 195 255);
+        }
+        .tg {
+          background-color: white;
+          color: black;
+          padding: 0.5rem;
+          padding-right: 0.6rem;
+          font-size: 20px;
+          border-radius: 50%;
+          &:hover {
+            background-color: rgb(9 195 255);
+          }
+        }
+      }
+    }
+  }
+  .footer-hr {
+    margin-top: 1rem;
+    border: 1px solid rgb(9 195 255);
+  }
+  .bhh {
+    color: grey;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

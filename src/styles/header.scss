@@ -1,0 +1,166 @@
+:root {
+  --OnHoverColor: rgb(131, 83, 255);
+}
+
+// header
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+
+  //   box-shadow: 1px 2px 10px green;
+  background: linear-gradient(
+    90deg,
+    rgb(182, 255, 229) 0%,
+    rgb(117, 209, 255) 53%,
+    rgb(101, 191, 255) 100%
+  );
+
+  // logo
+  .logo {
+    .own-style {
+      font-weight: 900;
+      color: rgb(0, 84, 78);
+    }
+  }
+
+  // navbar
+  .navbar {
+    display: flex;
+    align-items: center;
+
+    gap: 1.5rem;
+    list-style-type: none;
+
+    cursor: pointer;
+
+    //
+    .navigation-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    // change language
+    .select-language {
+      .change-language {
+        padding: 0.6rem 0.8rem;
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        border-radius: 5px;
+        outline: none;
+
+        option {
+          color: black;
+        }
+      }
+    }
+
+    // favourite products
+    .favourites-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 0.7rem;
+      background-color: white;
+      color: skyblue;
+      border-radius: 50%;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        background-color: var(--OnHoverColor);
+        color: white;
+      }
+    }
+
+    //
+    .add-elon-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      gap: 0.5rem;
+      background-color: rgb(53, 56, 80);
+      color: white;
+      padding: 0.2rem 1rem;
+      padding-left: 0.2rem;
+      border-radius: 80px;
+
+      .plus-icon {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(0, 187, 255);
+        padding: 0.8rem;
+        font-size: 1.3rem;
+        border-radius: 50%;
+        transition: 0.1s ease-in;
+      }
+
+      &:hover {
+        .plus-icon {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    .h-user-profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      //   user profile img
+      .profile-img {
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        background-color: white;
+        color: rgb(101, 191, 255);
+        padding: 0.7rem;
+        transition: 0.2s ease;
+
+        border-radius: 50%;
+
+        &:hover {
+          background-color: var(--OnHoverColor);
+          color: white;
+
+          ~ .user-surAndName {
+            color: var(--OnHoverColor);
+          }
+        }
+      }
+      .user-surAndName {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 995;
+    .navbar {
+      gap: 0;
+      .navigation-links {
+        display: none;
+      }
+      .favourites-link {
+        display: none;
+      }
+      .add-elon-link {
+        display: none;
+      }
+      .h-user-profile {
+        display: none;
+      }
+    }
+  }
+}

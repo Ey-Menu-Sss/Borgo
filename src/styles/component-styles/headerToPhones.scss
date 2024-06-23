@@ -1,0 +1,25 @@
+.header-to-phones {
+  display: none;
+  background-color: white;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  width: 100%;
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+
+    .li {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .header-to-phones {
+    display: block;
+  }
+}

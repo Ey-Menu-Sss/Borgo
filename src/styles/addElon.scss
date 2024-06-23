@@ -1,0 +1,262 @@
+.create-container {
+  padding: 2rem;
+  .page-title {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .about-announcement {
+    margin-top: 2rem;
+    background-color: white;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 5px;
+    padding: 2rem;
+    h3 {
+      font-size: 20px;
+      font-weight: 100;
+    }
+    p {
+      margin-top: 15px;
+      span {
+        font-size: 20px;
+        color: red;
+      }
+    }
+    input {
+      margin-top: 5px;
+      padding: 1rem;
+      outline: none;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f2f4f5;
+      width: 55%;
+    }
+    select {
+      margin-top: 5px;
+      width: 55%;
+      padding: 1rem;
+      background-color: #f2f4f5;
+      outline: none;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+    }
+  }
+
+  .upload-image {
+    margin-top: 2rem;
+    background-color: white;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 5px;
+    padding: 2rem;
+    h3 {
+      font-size: 20px;
+      font-weight: 100;
+      margin-bottom: 5px;
+    }
+    .upload-images {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+        background-color: rgb(216, 216, 216);
+        border-radius: 5px;
+        cursor: pointer;
+        i {
+          font-size: 40px;
+          color: rgb(0, 41, 81);
+        }
+      }
+      .main-img {
+        background-color: rgb(9, 195, 255);
+        i {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .tavsif {
+    margin: 1rem 0rem;
+    background-color: white;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 5px;
+    padding: 2rem;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 100;
+      margin-bottom: 5px;
+      span {
+        color: red;
+        font-size: 25px;
+      }
+    }
+    textarea {
+      border: 1px solid rgb(190, 190, 190);
+      border-radius: 5px;
+      margin-top: 1rem;
+      outline: none;
+      font-size: 18px;
+      padding: 1rem;
+      resize: none;
+      width: 50%;
+      // scroll styles
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      // ...
+      &::-webkit-scrollbar-track {
+        background-color: white;
+        border-radius: 10px;
+      }
+      // ...
+      &::-webkit-scrollbar-thumb {
+        background-color: rgb(49, 180, 255);
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .aloqa {
+    margin-top: 2rem;
+    background-color: white;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 5px;
+    padding: 2rem;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 100;
+      margin-bottom: 5px;
+    }
+    p {
+      margin-top: 15px;
+      span {
+        font-size: 20px;
+        color: red;
+      }
+    }
+
+    input {
+      margin-top: 5px;
+      padding: 1rem;
+      outline: none;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f2f4f5;
+      width: 55%;
+    }
+
+    select {
+      margin-top: 5px;
+      width: 55%;
+      padding: 1rem;
+      background-color: #f2f4f5;
+      outline: none;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+    }
+    .price {
+      display: flex;
+      gap: 1rem;
+      select {
+        width: 7%;
+      }
+      input {
+        width: 46.8%;
+      }
+    }
+  }
+  .phone-num {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    label {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      padding: 1rem;
+      outline: none;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f2f4f5;
+    }
+    input {
+      width: 49%;
+    }
+  }
+  .buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+    align-items: start;
+    font-size: 20px;
+    a {
+      text-decoration: none;
+      padding: 0.5rem 0rem;
+      border-bottom: 2px solid rgb(9, 195, 255);
+      color: rgb(9, 195, 255);
+    }
+    button {
+      padding: 0.6rem 0.9rem;
+      font-size: 20px;
+      color: white;
+      background-color: rgb(9, 195, 255);
+      border: 2px solid white;
+      border-radius: 10px;
+      transition: 0.2s ease;
+
+      &:hover {
+        border-color: rgb(9, 195, 255);
+        background: white;
+        color: rgb(9, 195, 255);
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .create-container {
+    .about-announcement,
+    .tavsif,
+    .aloqa {
+      input,
+      select,
+      textarea {
+        width: 100%;
+      }
+    }
+    .aloqa {
+      .price {
+        select {
+          width: 10%;
+        }
+        input {
+          width: 90%;
+        }
+      }
+    }
+    .upload-image {
+      .upload-images {
+        div {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}

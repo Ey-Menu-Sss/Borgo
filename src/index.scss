@@ -1,0 +1,80 @@
+// styles of pages
+@import "./styles/home.scss";
+@import "./styles/faq.scss";
+@import "./styles/aloqa.scss";
+@import "./styles/profile.scss";
+@import "./styles/filter.scss";
+@import "./styles/addElon.scss";
+@import "./styles/register.scss";
+@import "./styles/productDetail.scss";
+@import "./styles/component-styles/footer.scss";
+
+// styles of compoennts ( header )
+@import "./styles/header.scss";
+@import "./styles//component-styles/headerToPhones.scss";
+
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f2f4f5;
+
+  // scroll styles
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  // ...
+  &::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 10px;
+  }
+  // ...
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(49, 180, 255);
+    border-radius: 10px;
+  }
+  ::selection {
+    background: rgb(9 195 255);
+    color: blueviolet;
+  }
+}
+
+// link styles
+.link-styles {
+  text-decoration: none;
+  color: white;
+  transition: 0.1s ease-in;
+
+  &:hover {
+    color: rgb(131, 83, 255);
+  }
+}
+
+//
+.d-block {
+  display: block;
+}
+
+//
+.d-none {
+  display: none;
+}
+
+//
+
+// input ni yonidi qoshish ayirish buttonlani olp tashidi
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .footer, .nn1, .nn2{
+    display: none;
+  }
+}

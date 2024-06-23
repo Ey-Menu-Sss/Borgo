@@ -1,0 +1,14 @@
+// ADDS
+.Adds-section {
+  background-color: #f2f4f5;
+  padding: 2rem 3rem;
+  ul {
+    list-style-type: none;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+  }
+}

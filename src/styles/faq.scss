@@ -1,0 +1,48 @@
+.faq-page {
+  .faq-container {
+    font-family: "Poppins" sans-serif;
+    padding: 2rem;
+    h1 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    p {
+      font-size: 18px;
+    }
+    ul {
+      margin-left: 2rem;
+      font-size: 18px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+    hr {
+      border: 1px solid rgb(9 195 255);
+    }
+    .register-link {
+      color: rgb(9 195 255);
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    .paymen-methods {
+      padding: 0.5rem;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
+      display: flex;
+      gap: 30%;
+    }
+    .humo,
+    .uz-card {
+      display: flex;
+      align-items: center;
+      gap: 34%;
+      padding: 0.3em;
+      border-bottom: 1px solid rgb(204, 204, 204);
+      img {
+        width: 100px;
+      }
+    }
+  }
+}

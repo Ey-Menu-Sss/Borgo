@@ -1,0 +1,86 @@
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+
+  form {
+    background-color: white;
+    padding: 3rem 2rem;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 5px;
+    width: 450px;
+    margin: 3rem;
+    p {
+      font-size: 18px;
+      margin-top: 0.5rem;
+    }
+
+    input {
+      border: 1px solid rgb(221, 221, 221);
+      font-size: 18px;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      width: 100%;
+      border-radius: 5px;
+      outline: none;
+      &:focus {
+        border: 1px solid rgb(49, 180, 255);
+      }
+    }
+    .phone-number {
+      display: flex;
+      gap: 1rem;
+      input[readOnly] {
+        width: 4rem;
+      }
+    }
+    .forgot-psw {
+      text-decoration: none;
+      color: rgb(112, 203, 255);
+    }
+    button {
+      margin: 1rem 0rem;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      background-color: rgb(69, 187, 255);
+      cursor: pointer;
+    }
+
+    .or {
+      display: flex;
+      justify-content: space-between;
+      p {
+        font-weight: 500;
+      }
+      div {
+        height: 1px;
+        background-color: grey;
+        width: 40%;
+        margin-top: 16px;
+      }
+    }
+    .link-to-login {
+      text-align: center;
+      line-height: 1.5;
+
+      .link {
+        text-decoration: none;
+        font-size: 18px;
+        color: rgb(112, 203, 255);
+      }
+    }
+  }
+}
+@media (max-width: 990px) {
+  .register-container {
+    img {
+      display: none;
+    }
+  }
+}

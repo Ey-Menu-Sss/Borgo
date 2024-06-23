@@ -1,0 +1,116 @@
+.recommended {
+  background-color: rgb(201, 233, 255);
+  // margin-top: 2rem;
+  padding-bottom: 5rem;
+
+  .section-name {
+    padding: 2rem;
+
+    hr {
+      margin-top: 1rem;
+      border: 1px solid rgb(91, 222, 255);
+    }
+  }
+
+  .recommended-announcements {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    justify-items: center;
+
+    .card {
+      background-color: white;
+      border: 1px solid rgb(215, 215, 215);
+      border-radius: 10px;
+      .card-head {
+        display: flex;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 10px 10px 0px 0px;
+        img {
+          max-width: 100%;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      // body...
+
+      .card-body {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.7rem;
+        .card-body-texts {
+          cursor: pointer;
+          div {
+            font-size: 20px;
+          }
+          .price {
+            font-weight: 700;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+        .add-to-favourite {
+          i {
+            cursor: pointer;
+            font-size: 1.5rem;
+          }
+          .bxs-heart {
+            color: red;
+          }
+          .d-block {
+            display: block;
+          }
+          .d-none {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .btn-showMore {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    button {
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      background-color: rgb(0, 187, 255);
+      &:hover {
+        background-color: rgb(53, 201, 255);
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .recommended {
+    .recommended-announcements {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .recommended {
+    .recommended-announcements {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+@media (max-width: 700px) {
+  .recommended {
+    .recommended-announcements {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
