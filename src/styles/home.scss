@@ -9,8 +9,9 @@
   }
 
   .slider-container {
+    padding: 0rem 1rem;
     .l-r-buttons {
-      margin: 1rem 3rem;
+      margin: 1rem 0rem;
       text-align: right;
 
       .left-btn {
@@ -38,19 +39,16 @@
         }
       }
     }
-
-    .slider-container {
-      padding: 0rem 1.7rem;
-      // white-space: nowrap;
-    }
-    ul {
-      list-style-type: none;
+    .ul {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
       gap: 1.2rem;
       overflow: hidden;
-      li {
+      .li {
         cursor: pointer;
+        .img-to-center {
+          display: flex;
+          justify-content: center;
+        }
         .border {
           position: relative;
           border-radius: 50%;
@@ -99,7 +97,7 @@
             position: relative;
             z-index: 2; /* Ensure the content is above the gradient */
             img {
-              width: 80px;
+              max-width: 70%;
             }
           }
         }
@@ -114,7 +112,7 @@
 
   //
   .departments-categories {
-    padding: 2rem;
+    padding: 1rem;
 
     .dep-name {
       border: 1px solid rgb(189, 189, 189);
@@ -134,6 +132,7 @@
       border: 1px solid rgb(189, 189, 189);
       border-radius: 0px 0px 5px 5px;
 
+      overflow: hidden;
       border-top: none;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -212,5 +211,50 @@
   p {
     margin-top: 2.5rem;
     line-height: 1.5;
+  }
+}
+
+@media (max-width: 500px) {
+  .slider-container {
+    .ul {
+      .li {
+        .img-to-center {
+          .border {
+            width: 100px;
+            height: 100px;
+            div {
+              width: 90px;
+              height: 90px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 380px) {
+  .slider-container {
+    .ul {
+      .li {
+        .img-to-center {
+          .border {
+            width: 70px;
+            height: 70px;
+            div {
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .elonlar-categories {
+    h1 {
+      font-size: 24px;
+    }
   }
 }

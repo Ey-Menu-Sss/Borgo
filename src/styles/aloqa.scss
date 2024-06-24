@@ -100,7 +100,28 @@
 @media (max-width: 600px) {
   .contact-page {
     .aloqa-container {
-      padding: 2rem 0rem;
+      padding: 2rem 0.5rem;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .contact-page {
+    .aloqa-container {
+      .contact {
+        padding: 1rem 0.5rem;
+        h2 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+        }
+
+        form {
+          input {
+            font-size: 16px;
+          }
+        }
+      }
     }
   }
 }

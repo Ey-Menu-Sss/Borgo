@@ -84,3 +84,24 @@
     }
   }
 }
+@media (max-width: 550px) {
+  .register-container {
+    padding: 1rem 0.5rem;
+    form {
+      margin: 0;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .register-container {
+    padding: 0;
+    form {
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

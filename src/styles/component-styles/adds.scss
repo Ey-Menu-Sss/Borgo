@@ -12,3 +12,11 @@
     height: 6rem;
   }
 }
+@media (max-width: 450px) {
+  .Adds-section {
+    padding: 1rem;
+    ul {
+      height: 4rem;
+    }
+  }
+}

@@ -255,14 +255,65 @@
     }
   }
 }
-@media (max-width: 675px) {
+@media (max-width: 640px) {
   .create-container {
     padding: 0.5rem;
+    .about-announcement {
+      padding: 0.8rem;
+      h3 {
+        text-align: center;
+      }
+      input {
+        padding: 0.6rem;
+        font-size: 16px;
+      }
+      select {
+        font-size: 16px;
+        padding: 0.6rem;
+      }
+    }
     .upload-image {
+      padding: 0.5rem;
       .upload-images {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
+        gap: 10px;
+        div {
+          gap: 0.5rem;
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+    .tavsif {
+      padding: 0.8rem;
+    }
+    .aloqa {
+      padding: 0.8rem;
+      h3 {
+        text-align: center;
+      }
+      input {
+        padding: 0.6rem;
+        font-size: 16px;
+      }
+      select {
+        font-size: 16px;
+        padding: 0.6rem;
+      }
+    }
+    .phone-num {
+      label {
+        font-size: 16px;
+        padding: 0.6rem;
+      }
+    }
+    .buttons {
+      margin-bottom: 4rem;
+      font-size: 16px;
+      button {
+        font-size: 16px;
       }
     }
   }

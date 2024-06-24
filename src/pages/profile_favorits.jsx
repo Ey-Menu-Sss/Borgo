@@ -29,44 +29,52 @@ const profile_favourites = () => {
         <div className="favorites-dep">
           <h1>Sevimli E'lonlar</h1>
           <br />
-          {favorites?.map((f, i) => (
-            <div className="favorite-card">
-              <div className="card-img">
-                <img
-                  src={f.img}
-                  alt="your favorite announcement image"
-                  onClick={() => NavToPrductDet(f.id)}
-                />
-              </div>
-              <div className="card-datas">
-                <h2>{f.name}</h2>
-                <h2>
-                  {f.price} {f.price_type}
-                </h2>
-                <p className="category">{f.category}</p>
-                <div className="addressAndDate">
-                  <p>{f.owner_address}</p>
-                  <span> / </span>
-                  <p>{f.date}</p>
+          <div className="favorite-cards">
+            {favorites?.map((f, i) => (
+              <div className="favorite-card">
+                <div className="card-img">
+                  <img
+                    src={f.img}
+                    alt="your favorite announcement image"
+                    onClick={() => NavToPrductDet(f.id)}
+                  />
                 </div>
-                <div className="btns">
-                  <button className="show" onClick={() => NavToPrductDet(f.id)}>
-                    <i class="bx bx-show"></i>
-                    <span>Show more</span>
-                  </button>
-                  <br />
-                  <button className="delete" onClick={() => handleDeleteDepartment(f.id)}>
-                    <i class="bx bxs-trash-alt"></i>
-                    <span>Delete</span>
-                  </button>
+                <div className="card-datas">
+                  <h2>{f.name}</h2>
+                  <h2>
+                    {f.price} {f.price_type}
+                  </h2>
+                  <p className="category">{f.category}</p>
+                  <div className="addressAndDate">
+                    <p>{f.owner_address}</p>
+                    <span> / </span>
+                    <p>{f.date}</p>
+                  </div>
+                  <div className="btns">
+                    <button
+                      className="show"
+                      onClick={() => NavToPrductDet(f.id)}
+                    >
+                      <i class="bx bx-show"></i>
+                      <span>Show more</span>
+                    </button>
+                    <br />
+                    <button
+                      className="delete"
+                      onClick={() => handleDeleteDepartment(f.id)}
+                    >
+                      <i class="bx bxs-trash-alt"></i>
+                      <span>Delete</span>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
       <Footter />
-      <HeaderToPhones/>
+      <HeaderToPhones />
     </div>
   );
 };

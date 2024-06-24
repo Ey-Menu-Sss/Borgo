@@ -1,20 +1,19 @@
-import React, { useRef, useState } from "react";
+ import React, { useRef, useState } from "react";
 import { departments } from "../JsonDatas";
 import { Link } from "react-router-dom";
 
-const slider = ({ images }) => {
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import SwiperCore from "swiper";
+
+const Slider = ({ images }) => {
+  const [swiperInstance, setSwiperInstance] = useState(null);
   const elementRef = useRef();
+  const swiperRef = useRef(null);
   const [show, setShow] = useState(false);
   const [departmentName, setDepartmentName] = useState("");
   const [categories, setCategories] = useState([]);
 
-  //
-  function handleScrollRight() {
-    elementRef.current.scrollLeft += 148;
-  }
-  function handleScrollLeft() {
-    elementRef.current.scrollLeft -= 148;
-  }
   //
   function handleOnClickSliderItem(name) {
     const newCategories = [];
@@ -30,47 +29,105 @@ const slider = ({ images }) => {
     setCategories(newCategories);
   }
 
+  const handleSwipeNext = () => {
+    if (swiperInstance && swiperInstance.slideNext) {
+      swiperInstance.slideNext();
+    }
+  };
+
+  const handleSwipePrev = () => {
+    if (swiperInstance && swiperInstance.slidePrev) {
+      swiperInstance.slidePrev();
+    }
+  };
+
   return (
     <div className="slider-container">
       <div className="l-r-buttons">
-        <button className="slider-button left-btn" onClick={handleScrollLeft}>
-          <i class="bx bx-chevron-left"></i>
+        <button className="slider-button left-btn" onClick={handleSwipePrev}>
+          <i className="bx bx-chevron-left"></i>
         </button>
-        <button className="slider-button right-btn" onClick={handleScrollRight}>
-          <i class="bx bx-chevron-right"></i>
+        <button className="slider-button right-btn" onClick={handleSwipeNext}>
+          <i className="bx bx-chevron-right"></i>
         </button>
       </div>
-      <div className="slider-container">
-        <ul className="slider" ref={elementRef}>
-          {images.map((img, i) => (
-            <li
-              key={i}
-              className="slider-item"
+      <div className="slider-wrapper">
+        <Swiper
+          navigation={{
+            prevEl: ".left-btn",
+            nextEl: ".right-btn",
+          }}
+          spaceBetween={10}
+          slidesPerView={8}
+          breakpoints={{
+            0: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            615: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            815: {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+            1000: {
+              slidesPerView: 6,
+              spaceBetween: 30,
+            },
+            1180: {
+              slidesPerView: 7,
+              spaceBetween: 40,
+            },
+            1280: {
+              slidesPerView: 8,
+              spaceBetween: 10,
+            },
+            1450: {
+              slidesPerView: 10,
+              spaceBetween: 10,
+            },
+          }}
+          className="ul"
+          onSwiper={setSwiperInstance}
+        >
+          {images.map((img, index) => (
+            <SwiperSlide
+              key={index}
+              className="li"
               onClick={() => handleOnClickSliderItem(img.name)}
+              ref={swiperRef}
             >
-              <div className="border">
-                <div>
-                  <img src={img.src} alt={img.alt} />
+              <div className="img-to-center">
+                <div className="border">
+                  <div>
+                    <img src={img.src} alt={img.alt} />
+                  </div>
                 </div>
               </div>
               <p>{img.name}</p>
-            </li>
+            </SwiperSlide>
           ))}
-        </ul>
+        </Swiper>
       </div>
       <div className={`departments-categories ${show ? "d-block" : "d-none"}`}>
         <div className="dep-name">
           <h2>{departmentName}</h2>
-          <i class="bx bx-x" onClick={() => setShow(false)}></i>
+          <i className="bx bx-x" onClick={() => setShow(false)}></i>
         </div>
         <ul className="dep-categories">
           {categories.length === 0 ? (
             <h1 className="not-founded">no categories to this department!</h1>
           ) : (
             categories.map((c, i) => (
-              <Link key={i} className="li" to={`/filter/${departmentName}/${c}`}>
+              <Link
+                key={i}
+                className="li"
+                to={`/filter/${departmentName}/${c}`}
+              >
                 <div>
-                  <i class="bx bx-chevron-right"></i>
+                  <i className="bx bx-chevron-right"></i>
                 </div>
                 <div>
                   <p>{c}</p>
@@ -84,4 +141,4 @@ const slider = ({ images }) => {
   );
 };
 
-export default slider;
+export default Slider;

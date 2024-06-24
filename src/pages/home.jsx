@@ -9,6 +9,7 @@ import Card from "../components/card";
 import Footer from "../components/footer";
 import HeaderToPhones from "../components/headerToPhones";
 
+
 // json
 import { announcements, images } from "../JsonDatas";
 
@@ -17,7 +18,6 @@ import nn_img from "../assets/pc.png";
 import { Link } from "react-router-dom";
 
 const home = () => {
-
   function handleGetMoreCards() {
     // serverga zapros jo'natip yana 45ta card qo'shaman
   }
@@ -87,7 +87,7 @@ const home = () => {
       </div>
       {/* footoer */}
       <Footer />
-      <HeaderToPhones/>
+      <HeaderToPhones />
     </div>
   );
 };

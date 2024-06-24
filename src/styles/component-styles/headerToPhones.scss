@@ -25,3 +25,14 @@
     display: block;
   }
 }
+@media (max-width: 500px) {
+  .header-to-phones {
+    ul {
+      .li {
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
