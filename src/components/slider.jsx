@@ -1,24 +1,23 @@
- import React, { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { departments } from "../JsonDatas";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SwiperCore from "swiper";
 
 const Slider = ({ images }) => {
   const [swiperInstance, setSwiperInstance] = useState(null);
-  const elementRef = useRef();
   const swiperRef = useRef(null);
   const [show, setShow] = useState(false);
   const [departmentName, setDepartmentName] = useState("");
   const [categories, setCategories] = useState([]);
+  const navigate = useNavigate();
 
   //
   function handleOnClickSliderItem(name) {
     const newCategories = [];
     departments.forEach((n) => {
       if (n.name === name) {
+        // n.categories.length === 0 && navigate(`/filter/${name}`)
         setShow(true);
         setDepartmentName(name);
         n.categories.forEach((c, i) => {
@@ -117,24 +116,16 @@ const Slider = ({ images }) => {
           <i className="bx bx-x" onClick={() => setShow(false)}></i>
         </div>
         <ul className="dep-categories">
-          {categories.length === 0 ? (
-            <h1 className="not-founded">no categories to this department!</h1>
-          ) : (
-            categories.map((c, i) => (
-              <Link
-                key={i}
-                className="li"
-                to={`/filter/${departmentName}/${c}`}
-              >
-                <div>
-                  <i className="bx bx-chevron-right"></i>
-                </div>
-                <div>
-                  <p>{c}</p>
-                </div>
-              </Link>
-            ))
-          )}
+          {categories.map((c, i) => (
+            <Link key={i} className="li" to={`/filter/${departmentName}/${c}`}>
+              <div>
+                <i className="bx bx-chevron-right"></i>
+              </div>
+              <div>
+                <p>{c}</p>
+              </div>
+            </Link>
+          ))}
         </ul>
       </div>
     </div>

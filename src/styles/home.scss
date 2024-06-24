@@ -214,7 +214,61 @@
   }
 }
 
+@media (max-width: 1300px) {
+  .elonlar-categories {
+    .departments-categories {
+      .dep-categories {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
+@media (max-width: 1070px) {
+  .elonlar-categories {
+    .departments-categories {
+      .dep-categories {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+@media (max-width: 990px) {
+  .elonlar-categories {
+    .departments-categories {
+      padding: 0px;
+      position: fixed;
+      left: 0;
+      top: 84px;
+      z-index: 990;
+      background-color: white;
+      width: 320px;
+      height: calc(100vh - 84px - 60.8px);
+      overflow: scroll;
+      .dep-name {
+        background-color: #e2e8f0;
+      }
+      .dep-categories {
+        padding: 0.8rem;
+        display: block;
+
+        .li {
+          border-bottom: 1px solid rgb(229, 229, 229);
+          line-height: 3;
+          i {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 500px) {
+  .elonlar-categories {
+    .departments-categories {
+      height: calc(100vh - 84px - 44.8px);
+    }
+  }
   .slider-container {
     .ul {
       .li {

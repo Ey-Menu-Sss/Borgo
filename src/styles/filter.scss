@@ -32,3 +32,41 @@
     }
   }
 }
+
+@media (max-width: 675px) {
+  .filter-page {
+    .filter-container {
+      .param-names {
+        display: block;
+        text-align: center;
+        div {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .filter-page {
+    .filter-container {
+      padding: 2rem 0rem;
+      .param-names {
+        h1 {
+          font-size: 18px;
+        }
+        i {
+          font-size: 14px;
+        }
+        .bx-chevron-right {
+          font-size: 1rem;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+      .not-founded h1 {
+        font-size: 18px;
+      }
+    }
+  }
+}

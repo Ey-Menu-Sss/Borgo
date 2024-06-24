@@ -11,7 +11,7 @@ const headerToPhones = () => {
         </Link>
         <Link className="li" to={"/profile/favorites"}>
           <i class="bx bx-heart"></i>
-          <p>Sevimlilan</p>
+          <p>Sevimlilar</p>
         </Link>
         <Link className="li" to={"/create"}>
           <i class="bx bx-plus-circle"></i>

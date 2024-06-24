@@ -139,10 +139,15 @@
       .choose-categories {
         display: none;
       }
+      .serach-button {
+        span {
+          display: none;
+        }
+      }
     }
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 430px) {
   .serach-section-contatiner {
     padding: 0.6rem;
     .search-section {
@@ -154,8 +159,7 @@
         }
       }
       .serach-button {
-        font-size: 0.8rem;
-        padding: 0.4rem;
+        padding: 0.5rem;
       }
     }
   }
