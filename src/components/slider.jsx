@@ -41,7 +41,8 @@ const Slider = ({ images }) => {
   };
 
   return (
-    <div className="slider-container">
+    <div className="slider">
+      <div className="slider-container">
       <div className="l-r-buttons">
         <button className="slider-button left-btn" onClick={handleSwipePrev}>
           <i className="bx bx-chevron-left"></i>
@@ -60,27 +61,31 @@ const Slider = ({ images }) => {
           slidesPerView={8}
           breakpoints={{
             0: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            615: {
               slidesPerView: 4,
-              spaceBetween: 20,
+              spaceBetween: 5,
             },
-            815: {
+            600: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+            },
+            740: {
               slidesPerView: 5,
-              spaceBetween: 30,
+              spaceBetween: 5,
             },
-            1000: {
+            880: {
               slidesPerView: 6,
-              spaceBetween: 30,
+              spaceBetween: 5,
+            },
+            1050: {
+              slidesPerView: 7,
+              spaceBetween: 5,
             },
             1180: {
-              slidesPerView: 7,
-              spaceBetween: 40,
+              slidesPerView: 8,
+              spaceBetween: 5,
             },
             1280: {
-              slidesPerView: 8,
+              slidesPerView: 9,
               spaceBetween: 10,
             },
             1450: {
@@ -110,6 +115,8 @@ const Slider = ({ images }) => {
           ))}
         </Swiper>
       </div>
+      </div>
+
       <div className={`departments-categories ${show ? "d-block" : "d-none"}`}>
         <div className="dep-name">
           <h2>{departmentName}</h2>

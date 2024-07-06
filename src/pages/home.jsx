@@ -9,7 +9,6 @@ import Card from "../components/card";
 import Footer from "../components/footer";
 import HeaderToPhones from "../components/headerToPhones";
 
-
 // json
 import { announcements, images } from "../JsonDatas";
 
@@ -42,14 +41,17 @@ const home = () => {
       {/* recommended announcements... */}
 
       <div className="recommended">
-        <div className="section-name">
-          <h2>Tavisya Etiladi</h2>
-          <hr />
-        </div>
-        <div className="recommended-announcements">
-          {announcements.map((c, i) => (
-            <Card props={c} key={i} />
-          ))}
+        <div className="rec_container_to_center">
+          <div className="rec_container">
+            <div className="section-name">
+              <h2>Tavisya Etiladi</h2>
+            </div>
+            <div className="recommended-announcements">
+              {announcements.map((c, i) => (
+                <Card props={c} key={i} />
+              ))}
+            </div>
+          </div>
         </div>
         <div className="btn-showMore">
           <button onClick={handleGetMoreCards}>Ko'proq</button>

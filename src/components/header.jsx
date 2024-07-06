@@ -13,13 +13,13 @@ const header = () => {
         {/* navigation links */}
 
         <li className="navigation-links">
-          <Link to={"/"} className="link-styles">
+          <Link to={"/"} className="hovered">
             Asosiy
           </Link>
-          <Link to={"/faq"} className="link-styles">
+          <Link to={"/faq"} className="hovered">
             Pul ishlash
           </Link>
-          <Link to={"/aloqa"} className="link-styles">
+          <Link to={"/aloqa"} className="hovered">
             Biz blan aloqa
           </Link>
         </li>
@@ -27,7 +27,7 @@ const header = () => {
         {/* change language (select tag) */}
         <li className="select-language">
           <select className="change-language" name="changeLenguage">
-            <option value="uzbek">UZ</option>
+            <option value="uzbek">O'z</option>
             <option value="russian">RU</option>
             <option value="english">EN</option>
           </select>
@@ -46,7 +46,7 @@ const header = () => {
             <div className="plus-icon">
               <i class="bx bx-plus"></i>
             </div>
-            <div className="add-elon-text">Add Elon</div>
+            <div className="add-elon-text">E'lon qo'shish</div>
           </Link>
         </li>
 

@@ -5,11 +5,15 @@
 .elonlar-categories {
   background-color: white;
   h1 {
+    margin-top: 20px;
     text-align: center;
+    font-size: 30px;
   }
 
-  .slider-container {
+  .slider {
     padding: 0rem 1rem;
+    .slider-container {
+    }
     .l-r-buttons {
       margin: 1rem 0rem;
       text-align: right;
@@ -44,6 +48,7 @@
       gap: 1.2rem;
       overflow: hidden;
       .li {
+        font-size: 16px;
         cursor: pointer;
         .img-to-center {
           display: flex;
@@ -52,8 +57,8 @@
         .border {
           position: relative;
           border-radius: 50%;
-          width: 130px;
-          height: 130px;
+          width: 128px;
+          height: 128px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -104,7 +109,6 @@
         p {
           margin-top: 0.5rem;
           text-align: center;
-          font-size: 18px;
         }
       }
     }
@@ -223,16 +227,7 @@
     }
   }
 }
-@media (max-width: 1070px) {
-  .elonlar-categories {
-    .departments-categories {
-      .dep-categories {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  }
-}
-@media (max-width: 990px) {
+@media (max-width: 1024px) {
   .elonlar-categories {
     .departments-categories {
       padding: 0px;
@@ -263,22 +258,25 @@
   }
 }
 
-@media (max-width: 500px) {
+// 568
+@media (max-width: 568px) {
   .elonlar-categories {
     .departments-categories {
       height: calc(100vh - 84px - 44.8px);
     }
   }
-  .slider-container {
+  .slider {
+    padding: 0rem 0.5rem;
     .ul {
       .li {
+        font-size: 14px;
         .img-to-center {
           .border {
-            width: 100px;
-            height: 100px;
+            width: 91px;
+            height: 91px;
             div {
-              width: 90px;
-              height: 90px;
+              width: 85px;
+              height: 85px;
             }
           }
         }
@@ -286,29 +284,28 @@
     }
   }
 }
-@media (max-width: 380px) {
-  .slider-container {
-    .ul {
-      .li {
-        .img-to-center {
-          .border {
-            width: 70px;
-            height: 70px;
-            div {
-              width: 60px;
-              height: 60px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 380px) {
+@media (max-width: 425px) {
   .elonlar-categories {
-    h1 {
-      font-size: 24px;
+    .departments-categories {
+      height: calc(100vh - 84px - 44.8px);
+    }
+  }
+  .slider {
+    padding: 0rem 0.5rem;
+    .ul {
+      .li {
+        font-size: 14px;
+        .img-to-center {
+          .border {
+            width: 85px;
+            height: 85px;
+            div {
+              width: 81px;
+              height: 81px;
+            }
+          }
+        }
+      }
     }
   }
 }

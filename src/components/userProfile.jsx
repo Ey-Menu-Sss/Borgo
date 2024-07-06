@@ -66,7 +66,7 @@ const userProfile = () => {
       </Link>
       {/* to approved page*/}
       <Link className="approved" to={"/profile/approved"} ref={elementRefs[1]}>
-        <i class="bx bx-calendar-check"></i>
+      <i class="bx bx-calendar-check"></i>
         <p>Tasdiqlangan E'lonlar</p>
       </Link>
       {/* to pending page */}

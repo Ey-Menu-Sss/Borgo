@@ -6,7 +6,7 @@ const headerToPhones = () => {
     <div className="header-to-phones">
       <ul>
         <Link className="li" to={"/"}>
-          <i class="bx bxs-home"></i>
+          <i class="bx bx-home-alt"></i>
           <p>Asosiy</p>
         </Link>
         <Link className="li" to={"/profile/favorites"}>

@@ -1,3 +1,6 @@
+// importing font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap&subset=cyrillic");
+
 // styles of pages
 @import "./styles/home.scss";
 @import "./styles/faq.scss";
@@ -14,7 +17,6 @@
 @import "./styles//component-styles/headerToPhones.scss";
 
 * {
-  font-family: "Poppins";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,6 +24,7 @@
 }
 body {
   background-color: #f2f4f5;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 
   // scroll styles
@@ -45,11 +48,17 @@ body {
 }
 
 // link styles
-.link-styles {
-  text-decoration: none;
-  color: white;
-  transition: 0.1s ease-in;
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
+a:any-link {
+  cursor: pointer;
+}
+
+.hovered {
+  transition: 0.1s ease-in;
   &:hover {
     color: rgb(131, 83, 255);
   }
