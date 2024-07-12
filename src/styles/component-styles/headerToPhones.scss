@@ -19,20 +19,18 @@
       font-size: 20px;
       text-align: center;
       line-height: 1;
+      width: calc(25% - 12px);
 
       i {
-        font-size: 23px;
+        font-size: 28px;
       }
       p {
         font-size: 12px;
       }
-      .bx-plus-circle {
-        font-size: 26px;
-      }
     }
   }
 }
-@media (max-width: 1050px) {
+@media (max-width: 990px) {
   .header-to-phones {
     display: block;
   }

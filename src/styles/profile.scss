@@ -1,265 +1,237 @@
 @import "./component-styles/user-profile.scss";
 
 // profile dashboard .....
-.profile-dashboard {
-  .dashboard_container {
-    display: flex;
-    justify-content: center;
-  }
+.container {
+  width: 1535px;
+  padding: 70px 2rem;
 
-  .p_dash_container {
-    width: 1535px;
-    display: flex;
-    gap: 1.75rem;
-    padding: 70px 0px 40px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-
-    .dashboard {
-      padding: 20px;
-      h1 {
-        font-size: 30px;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid rgb(212, 212, 212);
-      }
-      .user-informations {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-
-        .page-link,
-        li {
-          text-decoration: none;
-          color: black;
-          padding: 1rem;
-          background-color: white;
-          display: flex;
-          align-items: center;
-          // gap: 1rem;
-          border-radius: 0.25rem;
-          font-size: 16px;
-          // width: 345px;
-          // max-width: 100%;
-          line-height: 1.2;
-          box-shadow: 1px 1px 5px rgb(222, 222, 222);
-          .img {
-            img {
-              width: 65px;
-            }
-          }
-          .link-name {
-            padding: 0px 12px;
-            h2 {
-              margin-top: 5px;
-              font-size: 20px;
-              font-weight: 600;
-            }
-          }
-        }
-        .page-link {
-          cursor: pointer;
-        }
-      }
-      .change_datas {
-        margin-top: 3rem;
-        .acc_information {
-          div {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0px;
-            border-bottom: 2px solid rgb(232, 232, 232);
-            h2 {
-              font-size: 20px;
-            }
-            span {
-              display: flex;
-              gap: 5px;
-              align-items: center;
-              cursor: pointer;
-              color: #3b82f6;
-              font: 14px "Poppins", sans-serif;
-              i {
-                font-size: 16px;
-              }
-            }
-          }
-          form {
-            .form_inputs {
-              display: flex;
-              gap: 0.75rem;
-              border-bottom: none;
-
-              input {
-                border: 1px solid transparent;
-              }
-              .getBorder {
-                border: 1px solid rgb(232, 232, 232);
-              }
-            }
-            .d-none {
-              display: none;
-            }
-            .btns {
-              padding: 0;
-              border-bottom: none;
-              display: flex;
-              justify-content: end;
-              gap: 1rem;
-            }
-          }
-        }
-
-        // edit psw
-        .edit_psw {
-          margin-top: 1rem;
-          h2 {
-            font-size: 18px;
-            font-weight: 100;
-            // border-bottom: 1px solid rgb(232, 232, 232);
-          }
-          form {
-            .form_inputs {
-              display: flex;
-              gap: 0.75rem;
-            }
-            .btn {
-              text-align: right;
-            }
-          }
-        }
-      }
+  // dashboard page ....
+  .dashboard {
+    padding: 1.25rem;
+    width: calc(100% - 330px - 1.75rem);
+    h1 {
+      font-size: 30px;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgb(212, 212, 212);
     }
-  }
-}
+    .user-informations {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
 
-// profile approved ....
-.profile-approved {
-  .p_approved_container {
-    padding: 4rem 2rem;
-    display: flex;
-    .approved-dep {
-      margin-left: 1rem;
-      width: 72%;
-      height: 50vh;
-      h1 {
-        padding: 1rem 0rem;
-        border-bottom: 1px solid rgb(212, 212, 212);
-      }
-      h2 {
-        text-align: center;
-        font-size: 35px;
-        color: grey;
-      }
-    }
-  }
-}
-
-// profile pending ....
-.profile-pending {
-  .p_pending_container {
-    padding: 4rem 2rem;
-    display: flex;
-    .pending-dep {
-      margin-left: 1rem;
-      width: 72%;
-      height: 50vh;
-      h1 {
-        padding: 1rem 0rem;
-        border-bottom: 1px solid rgb(212, 212, 212);
-      }
-      h2 {
-        text-align: center;
-        font-size: 35px;
-        color: grey;
-      }
-    }
-  }
-}
-// profile favourites ....
-.profile-favourites {
-  .p_favourites_container {
-    padding: 4rem 2rem;
-    display: flex;
-    .favorites-dep {
-      margin-left: 1rem;
-      width: 72%;
-      h1 {
-        padding: 1rem 0rem;
-        border-bottom: 1px solid rgb(212, 212, 212);
-      }
-      .favorite-card {
+      .page-link,
+      li {
+        text-decoration: none;
+        color: black;
+        padding: 1rem;
+        background-color: white;
         display: flex;
-        margin-bottom: 1rem;
-        .card-img {
-          width: 200px;
-          overflow: hidden;
-          height: 150px;
-          box-shadow: 1px 1px 3px rgb(195, 195, 195);
-          border-radius: 5px 0px 0px 5px;
-
-          // background-color: red;
-
+        align-items: center;
+        border-radius: 0.25rem;
+        font-size: 16px;
+        line-height: 1.2;
+        box-shadow: var(--shadow);
+        .img {
           img {
-            width: 200px;
-            cursor: pointer;
-            border-radius: 5px 0px 0px 5px;
-            transition: 0.2s ease-in-out;
-            &:hover {
-              transform: scale(1.2);
-            }
+            width: 65px;
           }
         }
-        .card-datas {
-          position: relative;
-          padding: 1rem;
-          border-radius: 0px 5px 5px 0px;
-          box-shadow: 1px 1px 3px rgb(192, 192, 192);
-          width: 100%;
-          height: 150px;
+        .link-name {
+          padding: 0px 12px;
+          h2 {
+            margin-top: 5px;
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+      .page-link {
+        cursor: pointer;
+      }
+    }
+    .change_datas {
+      margin-top: 3rem;
+      .acc_information {
+        div {
+          display: flex;
+          justify-content: space-between;
+          padding: 12px 0px;
+          border-bottom: 2px solid rgb(232, 232, 232);
           h2 {
             font-size: 20px;
-            cursor: pointer;
           }
-          .category {
-            margin-top: 0.2rem;
-            font-size: 16px;
-          }
-          .addressAndDate {
-            font-size: 18px;
+          span {
             display: flex;
             gap: 5px;
-            transform: translateY(18px);
-            color: rgb(117, 117, 117);
+            align-items: center;
+            cursor: pointer;
+            color: #3b82f6;
+            font: 14px "Poppins", sans-serif;
+            i {
+              font-size: 16px;
+            }
+          }
+        }
+        form {
+          .form_inputs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+            border-bottom: none;
+
+            input {
+              border: 1px solid transparent;
+            }
+            .getBorder {
+              border: 1px solid rgb(232, 232, 232);
+            }
+          }
+          .d-none {
+            display: none;
           }
           .btns {
-            position: absolute;
-            right: 5px;
-            top: 20px;
-            button {
-              font-size: 16px;
-              display: flex;
-              align-items: center;
-              gap: 5px;
-              padding: 0.3rem 0.6rem;
-              color: white;
-              border: none;
-              border-radius: 5px;
-              cursor: pointer;
-              transition: 0.2s ease-in-out;
-              &:hover {
-                opacity: 0.8;
-              }
-              i {
-                font-size: 22px;
-              }
+            padding: 0;
+            border-bottom: none;
+            display: flex;
+            justify-content: end;
+            gap: 1rem;
+          }
+        }
+      }
+
+      // edit psw
+      .edit_psw {
+        margin-top: 1rem;
+        h2 {
+          font-size: 18px;
+          font-weight: 100;
+          // border-bottom: 1px solid rgb(232, 232, 232);
+        }
+        form {
+          .form_inputs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+          }
+          .btn {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  // approved page ....
+  .approved-dep {
+    padding: 1.25rem;
+    width: calc(100% - 330px - 1.75rem);
+    h1 {
+      font-size: 30px;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgb(212, 212, 212);
+    }
+    .empty {
+      padding: 20px 0px;
+      text-align: center;
+      font-size: 30px;
+      color: grey;
+    }
+  }
+  // pending page ...
+  .pending-dep {
+    padding: 1.25rem;
+    width: calc(100% - 330px - 1.75rem);
+    h1 {
+      font-size: 30px;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgb(212, 212, 212);
+    }
+    .empty {
+      padding: 20px 0px;
+      text-align: center;
+      font-size: 30px;
+      color: grey;
+    }
+  }
+
+  // favorite page ....
+  .favorites {
+    padding: 1.25rem;
+    width: calc(100% - 330px);
+    h1 {
+      font-size: 30px;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgb(212, 212, 212);
+    }
+    .favorite-cards {
+      padding-top: 1.25rem;
+    }
+    .favorite-card {
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+      border-radius: 5px;
+
+      .card-img {
+        height: 150px;
+        img {
+          width: 200px;
+          height: 100%;
+          cursor: pointer;
+          border-radius: 5px 0px 0px 5px;
+          transition: 0.1s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      .card-datas {
+        padding: 12px;
+        width: 100%;
+        .info {
+          height: 100%;
+        }
+        .card_name {
+          font: 18px "Poppins", sans-serif;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .card_price {
+          font: 16px "Poppins", sans-serif;
+          font-weight: 600;
+          // margin-top: 4px;
+        }
+        .category {
+          font: 14px "Poppins", sans-serif;
+        }
+        .addressAndDate {
+          font: 14px "Poppins", sans-serif;
+          gap: 5px;
+          color: #6d6d6d;
+        }
+        .btns {
+          flex-direction: column;
+          align-items: end;
+          button {
+            font: 14px "Poppins", sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            i {
+              font-size: 18px;
             }
-            .show {
-              background-color: green;
-            }
-            .delete {
-              position: absolute;
-              right: 15px;
-              background-color: red;
+          }
+          .show {
+            background-color: #0da487;
+          }
+          .delete {
+            background-color: #ef4444;
+            margin-top: -18px;
+            i {
+              font-size: 14px;
             }
           }
         }
@@ -267,7 +239,9 @@
     }
   }
 }
-
+.dash {
+  gap: 1.75rem;
+}
 //
 .button-style {
   margin: 12px 0px;
@@ -315,11 +289,178 @@
 }
 
 @media (max-width: 1535px) {
-  .profile-dashboard {
-    .dashboard_container {
-      .p_dash_container {
-        width: 1440px;
-        // background-color: red;
+  .container {
+    width: 1440px;
+  }
+}
+@media (max-width: 1440px) {
+  .container {
+    width: 1280px;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    width: 990px;
+    .dashboard {
+      .user-informations {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .change_datas .acc_information form .form_inputs,
+      .change_datas .edit_psw form .form_inputs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+@media (max-width: 990px) {
+  .container {
+    width: 768px;
+    padding: 3rem 1rem;
+    .dashboard,
+    .approved-dep,
+    .pending-dep,
+    .favorites {
+      width: 100%;
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 640px;
+    .approved-dep,
+    .pending-dep,
+    .favorites {
+      h1 {
+        font-size: 20px;
+      }
+    }
+    .favorites .favorite-card .card-datas {
+      display: block;
+      .info {
+      }
+      .card_name {
+        font: 14px "Poppins", sans-serif;
+        font-weight: 600;
+      }
+      .addressAndDate {
+        transform: translateY(-25px);
+      }
+      .btns {
+        transform: translateY(-25px);
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+  .button-style,
+  .btn_cancel {
+    padding: 8px 12px;
+    font: 14px "Poppins", sans-serif;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    width: 568px;
+    .dashboard h1 {
+      font-size: 20px;
+    }
+    .favorites {
+      .favorite-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        .favorite-card {
+          margin-top: 0;
+          flex-direction: column;
+          width: 100%;
+          max-width: 238px;
+          .card-img {
+            width: 100%;
+            height: 119px;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 5px 5px 0px 0px;
+            }
+          }
+          .card-datas {
+            padding: 8px;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            height: calc(100% - 119px);
+            .info {
+              justify-content: start;
+              width: 100%;
+            }
+            .card_price {
+              font-size: 14px;
+            }
+            .card_name {
+              font-weight: 100;
+            }
+            .addressAndDate {
+              margin-top: 0.25rem;
+              transform: translateY(0px);
+              justify-content: space-between;
+            }
+            .category {
+              font-size: 12px;
+            }
+            .btns {
+              transform: translateY(0px);
+              width: 100%;
+              margin-top: 0.5rem;
+              button {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 568px) {
+  .container {
+    width: 425px;
+    .dashboard .user-informations {
+      grid-template-columns: 1fr;
+    }
+    .favorites {
+      .favorite-card {
+        .card-datas {
+          .addressAndDate {
+            font-size: 12px;
+          }
+          .category {
+            margin-top: 0.25rem;
+          }
+          .btns {
+            flex-direction: column;
+            .show i {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .container {
+    width: 425px;
+    padding: 4rem 0rem;
+    .dashboard {
+      padding: 0px 12px;
+      .change_datas .acc_information form .form_inputs,
+      .change_datas .edit_psw form .form_inputs {
+        grid-template-columns: 1fr;
       }
     }
   }

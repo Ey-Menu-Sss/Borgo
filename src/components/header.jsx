@@ -23,7 +23,6 @@ const header = () => {
             Biz blan aloqa
           </Link>
         </li>
-
         {/* change language (select tag) */}
         <li className="select-language">
           <select className="change-language" name="changeLenguage">
@@ -52,11 +51,11 @@ const header = () => {
 
         {/* user profile */}
         <li className="h-user-profile">
-          <Link className="profile-img link-styles" to={"/profile/dashboard"}>
+          <Link className="profile-img" to={"/profile/dashboard"}>
             <i className="bx bxs-user"></i>
           </Link>
           <Link
-            className="user-surAndName link-styles"
+            className="user-surAndName"
             to={"/profile/dashboard"}
           >
             <p className="profile-name">Noname</p>

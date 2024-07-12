@@ -22,54 +22,58 @@ const profile_favourites = () => {
   }
 
   return (
-    <div className="profile-favourites">
+    <div>
       <Header />
-      <div className="p_favourites_container">
-        <UserProfile />
-        <div className="favorites-dep">
-          <h1>Sevimli E'lonlar</h1>
-          <br />
-          <div className="favorite-cards">
-            {favorites?.map((f, i) => (
-              <div className="favorite-card">
-                <div className="card-img">
-                  <img
-                    src={f.img}
-                    alt="your favorite announcement image"
-                    onClick={() => NavToPrductDet(f.id)}
-                  />
-                </div>
-                <div className="card-datas">
-                  <h2>{f.name}</h2>
-                  <h2>
-                    {f.price} {f.price_type}
-                  </h2>
-                  <p className="category">{f.category}</p>
-                  <div className="addressAndDate">
-                    <p>{f.owner_address}</p>
-                    <span> / </span>
-                    <p>{f.date}</p>
-                  </div>
-                  <div className="btns">
-                    <button
-                      className="show"
+      <div className="flex justify-center">
+        <div className="container flex">
+          <UserProfile />
+          <div className="favorites">
+            <h1>Sevimli E'lonlar</h1>
+            <div className="favorite-cards">
+              {favorites?.map((f, i) => (
+                <div className="favorite-card flex">
+                  <div className="card-img">
+                    <img
+                      src={f.img}
+                      alt="your favorite announcement image"
                       onClick={() => NavToPrductDet(f.id)}
-                    >
-                      <i class="bx bx-show"></i>
-                      <span>Show more</span>
-                    </button>
-                    <br />
-                    <button
-                      className="delete"
-                      onClick={() => handleDeleteDepartment(f.id)}
-                    >
-                      <i class="bx bxs-trash-alt"></i>
-                      <span>Delete</span>
-                    </button>
+                    />
+                  </div>
+                  <div className="card-datas flex justify-between align-center">
+                    <div className="info flex FDColumn justify-between">
+                      <div>
+                        <h2 className="card_name">{f.name}</h2>
+                        <h2 className="card_price">
+                          {f.price} {f.price_type}
+                        </h2>
+                        <p className="category">{f.category}</p>
+                      </div>
+                      <div className="addressAndDate flex">
+                        <p>{f.owner_address}</p>
+                        <p> / {f.date}</p>
+                      </div>
+                    </div>
+                    <div className="btns flex">
+                      <button
+                        className="show"
+                        onClick={() => NavToPrductDet(f.id)}
+                      >
+                        <i class="bx bx-show"></i>
+                        <span>Ko'rish</span>
+                      </button>
+                      <br />
+                      <button
+                        className="delete"
+                        onClick={() => handleDeleteDepartment(f.id)}
+                      >
+                        <i class="bx bxs-trash-alt"></i>
+                        <span>O'chirish</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

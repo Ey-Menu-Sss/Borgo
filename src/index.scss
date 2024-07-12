@@ -16,6 +16,11 @@
 @import "./styles/header.scss";
 @import "./styles//component-styles/headerToPhones.scss";
 
+:root{
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+  0 1px 2px -1px rgb(0 0 0 / 0.1)
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -73,8 +78,26 @@ a:any-link {
 .d-none {
   display: none;
 }
-
 //
+
+.flex{
+  display: flex;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.align-center{
+  align-items: center;
+}
+.FDColumn{
+  flex-direction: column;
+}
+.FDRow{
+  flex-direction: row;
+}
 
 // input ni yonidi qoshish ayirish buttonlani olp tashidi
 input[type="number"]::-webkit-outer-spin-button,

@@ -339,7 +339,7 @@ let announcements = [
 let favorites = [
   {
     id: 1,
-    name: "iphone 14 pro",
+    name: "Akmulyator Varta optim va donaga 24 Soat hizmatizda",
     description: "lorem ipsum dolar sit amet blabla",
     price: "800",
     price_type: "y.e.",
@@ -354,7 +354,7 @@ let favorites = [
   },
   {
     id: 2,
-    name: "iphone 15 pro",
+    name: "iphone 14 pro",
     description: "lorem ipsum dolar sit amet blabla",
     price: "1200",
     price_type: "y.e.",
@@ -371,7 +371,7 @@ let favorites = [
     id: 3,
     name: "iphone 11 pro max",
     description: "lorem ipsum dolar sit amet blabla",
-    price: "800000",
+    price: "800 000",
     price_type: "sum",
     category: "Elektr jihozlari",
     owner_phone_number: "339993399",

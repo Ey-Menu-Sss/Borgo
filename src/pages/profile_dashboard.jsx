@@ -20,10 +20,10 @@ const profile_dashboard = () => {
   const [isReadonly, setIsReadonly] = useState(true);
 
   return (
-    <div className="profile-dashboard">
+    <div>
       <Header />
-      <div className="dashboard_container">
-        <div className="p_dash_container">
+      <div className="flex justify-center">
+        <div className="flex container dash">
           <UserProfile />
           <div className="dashboard">
             <h1>Boshqaruv Paneli</h1>
@@ -129,7 +129,10 @@ const profile_dashboard = () => {
                     <button
                       className="btn_cancel"
                       type="button"
-                      onClick={() => setBtnDisplay("d-none")}
+                      onClick={() => {
+                        setBtnDisplay("d-none");
+                        setIsReadonly(true);
+                      }}
                     >
                       Bekor qilish
                     </button>

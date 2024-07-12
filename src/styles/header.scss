@@ -138,12 +138,16 @@ header {
       .user-surAndName {
         line-height: 1.2;
         font-size: 16px;
+        transition: 0.2s ease;
+        &:hover {
+          color: var(--OnHoverColor);
+        }
       }
     }
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 990px) {
   header {
     position: sticky;
     top: 0;

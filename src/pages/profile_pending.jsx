@@ -6,18 +6,19 @@ import HeaderToPhones from "../components/headerToPhones";
 
 const profile_pending = () => {
   return (
-    <div className="profile-pending">
+    <div>
       <Header />
-      <div className="p_pending_container">
-        <UserProfile />
-        <div className="pending-dep">
-          <h1>Kutilayotgan E'lonlar</h1>
-          <br />
-          <h2>Hech narsa topilmadi!</h2>
+      <div className="flex justify-center">
+        <div className="container flex">
+          <UserProfile />
+          <div className="pending-dep">
+            <h1>Kutilayotgan E'lonlar</h1>
+            <h2 className="empty">Hech narsa topilmadi!</h2>
+          </div>
         </div>
       </div>
       <Footter />
-      <HeaderToPhones/>
+      <HeaderToPhones />
     </div>
   );
 };
