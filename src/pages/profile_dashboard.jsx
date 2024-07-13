@@ -23,7 +23,7 @@ const profile_dashboard = () => {
     <div>
       <Header />
       <div className="flex justify-center">
-        <div className="flex container dash">
+        <div className="flex container dash pppedding">
           <UserProfile />
           <div className="dashboard">
             <h1>Boshqaruv Paneli</h1>

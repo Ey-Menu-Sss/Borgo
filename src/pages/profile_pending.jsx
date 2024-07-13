@@ -9,7 +9,7 @@ const profile_pending = () => {
     <div>
       <Header />
       <div className="flex justify-center">
-        <div className="container flex">
+        <div className="container flex pppedding">
           <UserProfile />
           <div className="pending-dep">
             <h1>Kutilayotgan E'lonlar</h1>

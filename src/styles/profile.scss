@@ -3,7 +3,6 @@
 // profile dashboard .....
 .container {
   width: 1535px;
-  padding: 70px 2rem;
 
   // dashboard page ....
   .dashboard {
@@ -315,7 +314,6 @@
 @media (max-width: 990px) {
   .container {
     width: 768px;
-    padding: 3rem 1rem;
     .dashboard,
     .approved-dep,
     .pending-dep,
@@ -454,8 +452,7 @@
 }
 @media (max-width: 425px) {
   .container {
-    width: 425px;
-    padding: 4rem 0rem;
+    width: 100%;
     .dashboard {
       padding: 0px 12px;
       .change_datas .acc_information form .form_inputs,

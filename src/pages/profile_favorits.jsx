@@ -25,7 +25,7 @@ const profile_favourites = () => {
     <div>
       <Header />
       <div className="flex justify-center">
-        <div className="container flex">
+        <div className="container flex pppedding">
           <UserProfile />
           <div className="favorites">
             <h1>Sevimli E'lonlar</h1>

@@ -16,9 +16,8 @@
 @import "./styles/header.scss";
 @import "./styles//component-styles/headerToPhones.scss";
 
-:root{
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
-  0 1px 2px -1px rgb(0 0 0 / 0.1)
+:root {
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
 * {
@@ -80,23 +79,30 @@ a:any-link {
 }
 //
 
-.flex{
+.flex {
   display: flex;
 }
-.justify-center{
+.justify-center {
   justify-content: center;
 }
-.justify-between{
+.justify-between {
   justify-content: space-between;
 }
-.align-center{
+.align-center {
   align-items: center;
 }
-.FDColumn{
+.FDColumn {
   flex-direction: column;
 }
-.FDRow{
+.FDRow {
   flex-direction: row;
+}
+.pointer{
+  cursor: pointer;
+}
+// profile page pedding
+.pppedding {
+  padding: 70px 2rem;
 }
 
 // input ni yonidi qoshish ayirish buttonlani olp tashidi
@@ -111,5 +117,15 @@ input[type="number"]::-webkit-inner-spin-button {
   .nn1,
   .nn2 {
     display: none;
+  }
+}
+@media (max-width: 990px) {
+  .pppedding {
+    padding: 3rem 1rem;
+  }
+}
+@media (max-width: 425px) {
+  .pppedding {
+    padding: 4rem 0rem;
   }
 }

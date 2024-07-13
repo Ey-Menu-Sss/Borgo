@@ -11,7 +11,7 @@ const profile_approved = () => {
     <div className="profile-approved">
       <Header />
       <div className="flex justify-center">
-        <div className="container flex">
+        <div className="container flex pppedding">
           <UserProfile />
           <div className="approved-dep">
             <h1>Tasdiqlangan E'lonlar</h1>

@@ -17,10 +17,9 @@ const Slider = ({ images }) => {
     const newCategories = [];
     departments.forEach((n) => {
       if (n.name === name) {
-        // n.categories.length === 0 && navigate(`/filter/${name}`)
         setShow(true);
         setDepartmentName(name);
-        n.categories.forEach((c, i) => {
+        n.categories.forEach((c) => {
           newCategories.push(c);
         });
       }
@@ -41,80 +40,71 @@ const Slider = ({ images }) => {
   };
 
   return (
-    <div className="slider">
-      <div className="slider-container">
-      <div className="l-r-buttons">
-        <button className="slider-button left-btn" onClick={handleSwipePrev}>
-          <i className="bx bx-chevron-left"></i>
-        </button>
-        <button className="slider-button right-btn" onClick={handleSwipeNext}>
-          <i className="bx bx-chevron-right"></i>
-        </button>
-      </div>
-      <div className="slider-wrapper">
+    <div className="flex justify-center">
+      <div className="container slider">
+        {/* button to swipe */}
+        <div className="l-r-buttons">
+          <button className="slider-button left-btn" onClick={handleSwipePrev}>
+            <i className="bx bx-chevron-left"></i>
+          </button>
+          <button className="slider-button right-btn" onClick={handleSwipeNext}>
+            <i className="bx bx-chevron-right"></i>
+          </button>
+        </div>
+        {/* button to swipe end... */}
+
+        {/* slider wrapper */}
         <Swiper
           navigation={{
             prevEl: ".left-btn",
             nextEl: ".right-btn",
           }}
-          spaceBetween={10}
-          slidesPerView={8}
+          slidesPerView={10}
           breakpoints={{
             0: {
               slidesPerView: 4,
               spaceBetween: 5,
             },
-            600: {
+            640: {
               slidesPerView: 4,
-              spaceBetween: 10,
+              spaceBetween: 5,
             },
-            740: {
+            768: {
               slidesPerView: 5,
               spaceBetween: 5,
             },
-            880: {
-              slidesPerView: 6,
-              spaceBetween: 5,
-            },
-            1050: {
+            990: {
               slidesPerView: 7,
-              spaceBetween: 5,
-            },
-            1180: {
-              slidesPerView: 8,
               spaceBetween: 5,
             },
             1280: {
               slidesPerView: 9,
-              spaceBetween: 10,
+              spaceBetween: 5,
             },
-            1450: {
+            1440: {
               slidesPerView: 10,
-              spaceBetween: 10,
+              spaceBetween: 5,
             },
           }}
-          className="ul"
+          className="slider-wrapper"
           onSwiper={setSwiperInstance}
         >
           {images.map((img, index) => (
             <SwiperSlide
               key={index}
-              className="li"
+              className="pointer flex FDColumn align-center"
               onClick={() => handleOnClickSliderItem(img.name)}
               ref={swiperRef}
             >
-              <div className="img-to-center">
-                <div className="border">
-                  <div>
-                    <img src={img.src} alt={img.alt} />
-                  </div>
+              <div className="border flex align-center justify-center">
+                <div className="flex align-center justify-center">
+                  <img src={img.src} alt={img.alt} />
                 </div>
               </div>
               <p>{img.name}</p>
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
       </div>
 
       <div className={`departments-categories ${show ? "d-block" : "d-none"}`}>
