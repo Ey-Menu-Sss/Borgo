@@ -280,10 +280,12 @@
     .departments-categories {
       height: calc(100vh - 84px - 44.8px);
     }
+    .l-r-buttons {
+      margin-right: 0;
+    }
 
     .slider-wrapper {
       .swiper-slide {
-        // background-color: red;
         .border {
           width: 80px;
           height: 80px;

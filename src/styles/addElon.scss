@@ -205,21 +205,20 @@
     gap: 1rem;
     justify-content: end;
     align-items: start;
-    font-size: 20px;
     a {
       text-decoration: none;
-      padding: 0.5rem 0rem;
+      padding: 8px 0px;
       border-bottom: 2px solid rgb(9, 195, 255);
       color: rgb(9, 195, 255);
     }
     button {
+      font: 16px "Poppins", sans-serif;
       cursor: pointer;
-      padding: 0.6rem 0.9rem;
-      font-size: 20px;
+      padding: 8px 20px;
       color: white;
       background-color: rgb(9, 195, 255);
       border: 2px solid white;
-      border-radius: 10px;
+      border-radius: 8px;
       transition: 0.2s ease;
 
       &:hover {
@@ -258,6 +257,7 @@
 @media (max-width: 640px) {
   .create-container {
     padding: 0.5rem;
+    padding-bottom: 2rem;
     .about-announcement {
       padding: 0.8rem;
       h3 {
@@ -311,9 +311,9 @@
     }
     .buttons {
       margin-bottom: 4rem;
-      font-size: 16px;
-      button {
-        font-size: 16px;
+      button,
+      a {
+        font: 14px "Poppins", sans-serif;
       }
     }
   }

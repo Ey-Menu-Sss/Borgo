@@ -13,7 +13,7 @@ const headerToPhones = () => {
           <i class="bx bx-heart"></i>
           <p>Sevimlilar</p>
         </Link>
-        <Link className="li" to={"/create"}>
+        <Link className="li center-item" to={"/create"}>
           <i class="bx bx-plus-circle"></i>
           <p>E'lon bering</p>
         </Link>
