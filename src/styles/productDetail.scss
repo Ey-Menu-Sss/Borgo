@@ -2,8 +2,6 @@
   width: 1536px;
   max-width: 100%;
   padding-top: 2rem;
-  display: flex;
-  justify-content: center;
   // background-color: red;
   .product_details_container {
     width: 1472px;
@@ -11,7 +9,6 @@
 
     // product details ...
     .product_details {
-      display: flex;
       .swiper_images {
         display: none;
       }
@@ -385,10 +382,11 @@
   .pdc_to_center {
     padding-top: 0rem;
     .product_details_container {
+      width: 100%;
       padding: 0;
 
       .tavsif {
-        margin: 1rem 12px;
+        margin: 1rem 0rem;
       }
 
       .product_details {
@@ -403,15 +401,18 @@
         }
 
         .swiper_images {
-          // width: 100%;
+          width: 100%;
           max-width: 424px;
 
-          // .swiper_slide {
-          //   img {
-          //     width: 100%;
-          //   }
-          // }
+          .swiper_slide {
+            img {
+              max-width: 100%;
+            }
+          }
         }
+      }
+      .tavsif {
+        // padding: 0;
       }
     }
   }

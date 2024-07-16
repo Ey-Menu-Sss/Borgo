@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 //
 import Header from "../components/header";
@@ -15,11 +15,41 @@ import { announcements, images } from "../JsonDatas";
 // image
 import nn_img from "../assets/pc.png";
 import { Link } from "react-router-dom";
+import { debounce } from "lodash";
 
 const home = () => {
+  const [loadingDisplay, setLoadingDisplay] = useState("d-none");
+  const [hasScrolledToEnd, setHasScrolledToEnd] = useState(false);
+
   function handleGetMoreCards() {
     // serverga zapros jo'natip yana 45ta card qo'shaman
   }
+
+  useEffect(() => {
+    if (window.innerWidth < 425) {
+      const handleScroll = () => {
+        const scrollable =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = window.scrollY;
+
+        if (Math.ceil(scrolled) >= scrollable && !hasScrolledToEnd) {
+          // console.log("Scrolled to bottom");
+          setLoadingDisplay("d-show");
+          setHasScrolledToEnd(true);
+          setTimeout(() => {
+            setLoadingDisplay("d-none");
+            setTimeout(() => {
+              setHasScrolledToEnd(false);
+            }, 200);
+          }, 500);
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [hasScrolledToEnd]);
+
   return (
     <div>
       {/* header... */}
@@ -41,7 +71,7 @@ const home = () => {
       {/* recommended announcements... */}
 
       <div className="recommended">
-        <div className="rec_container_to_center">
+        <div className="flex justify-center">
           <div className="rec_container">
             <div className="section-name">
               <h2>Tavisya Etiladi</h2>
@@ -55,6 +85,9 @@ const home = () => {
         </div>
         <div className="btn-showMore">
           <button onClick={handleGetMoreCards}>Ko'proq</button>
+        </div>
+        <div className={`${loadingDisplay}`}>
+          <div className="loading"></div>
         </div>
       </div>
 

@@ -24,16 +24,19 @@
         font-size: 2rem;
       }
     }
-    .not-founded {
-      margin-top: 2rem;
+    .empty {
+      padding: 20px 0px;
       text-align: center;
-      height: 300px;
-      color: rgb(166, 166, 166);
+      font-size: 30px;
+      color: grey;
+    }
+    .loading {
+      margin-top: 2rem;
     }
   }
 }
 
-@media (max-width: 675px) {
+@media (max-width: 640px) {
   .filter-page {
     .filter-container {
       .param-names {
@@ -46,26 +49,26 @@
     }
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 425px) {
   .filter-page {
     .filter-container {
       padding: 2rem 0rem;
       .param-names {
         h1 {
-          font-size: 18px;
+          font-size: 20px;
         }
         i {
-          font-size: 14px;
+          font-size: 16px;
         }
         .bx-chevron-right {
           font-size: 1rem;
         }
         span {
-          font-size: 14px;
+          font-size: 16px;
         }
       }
-      .not-founded h1 {
-        font-size: 18px;
+      .empty {
+        font-size: 25px;
       }
     }
   }

@@ -40,7 +40,7 @@ const Slider = ({ images }) => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex align-center FDColumn">
       <div className="container slider">
         {/* button to swipe */}
         <div className="l-r-buttons">

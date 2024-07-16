@@ -48,11 +48,11 @@ const productDetail = () => {
   const imageUrl = changeBigImgTo(bigImgIndex);
 
   return (
-    <div className="prodcut_detail_section">
+    <div>
       <Header />
-      <div className="pdc_to_center">
+      <div className="pdc_to_center flex justify-center">
         <div className="product_details_container">
-          <div className="product_details">
+          <div className="product_details flex">
             <Swiper
               spaceBetween={50}
               slidesPerView={1}

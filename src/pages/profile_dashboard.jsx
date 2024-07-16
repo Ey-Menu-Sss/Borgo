@@ -102,9 +102,7 @@ const profile_dashboard = () => {
                   <div className="form_inputs">
                     <input
                       type="text"
-                      className={`input-style ${
-                        btnDisplay === "btns" ? "getBorder" : ""
-                      }`}
+                      className={`input-style ${btnDisplay === "btns" ? "getBorder" : ""}`}
                       placeholder="Ism"
                       readOnly={isReadonly}
                     />

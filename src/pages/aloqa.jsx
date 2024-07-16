@@ -8,7 +8,7 @@ const aloqa = () => {
   return (
     <div className="contact-page">
       <Header />
-      <div className="aloqa-container">
+      <div className="aloqa-container flex justify-center align-center">
         <div className="img">
           <img src={ContactImg} alt="contact image" />
         </div>

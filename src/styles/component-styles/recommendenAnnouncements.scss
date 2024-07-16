@@ -2,12 +2,6 @@
   background: linear-gradient(90deg, rgba(238, 238, 238, 1) 0%, #09c1f650 100%);
   padding-bottom: 5rem;
 
-  .rec_container_to_center {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
   .rec_container {
     padding: 30px;
     width: 100%;
@@ -28,29 +22,34 @@
       grid-template-columns: repeat(5, 1fr);
       gap: 3px;
       row-gap: 0.75rem;
-      justify-content: center;
       justify-items: center;
       width: 100%;
     }
   }
-
-  .btn-showMore {
-    margin-top: 1rem;
+  .d-none {
+    display: none;
+  }
+  .d-show {
     display: flex;
     justify-content: center;
+  }
+}
+.btn-showMore {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 
-    button {
-      border: none;
-      border-radius: 5px;
-      font: 16px "Poppins", sans-serif;
-      color: white;
-      cursor: pointer;
-      padding: 8px 16px;
-      background-color: #09c3ff;
+  button {
+    border: none;
+    border-radius: 5px;
+    font: 16px "Poppins", sans-serif;
+    color: white;
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: #09c3ff;
 
-      &:hover {
-        background-color: rgb(53, 201, 255);
-      }
+    &:hover {
+      background-color: rgb(53, 201, 255);
     }
   }
 }
@@ -143,7 +142,7 @@
 }
 
 @media (max-width: 1280px) {
-  .recommended .rec_container_to_center .rec_container {
+  .recommended .rec_container {
     width: 100%;
     max-width: 991px;
 
@@ -158,7 +157,7 @@
 }
 
 @media (max-width: 990px) {
-  .recommended .rec_container_to_center .rec_container {
+  .recommended .rec_container {
     padding: 1rem 40px;
     width: 100%;
     max-width: 768px;
@@ -174,7 +173,7 @@
 }
 
 @media (max-width: 768px) {
-  .recommended .rec_container_to_center .rec_container {
+  .recommended .rec_container {
     width: 100%;
     max-width: 640px;
   }
@@ -195,7 +194,7 @@
 }
 
 @media (max-width: 640px) {
-  .recommended .rec_container_to_center .rec_container {
+  .recommended .rec_container {
     width: 100%;
     max-width: 568px;
 
@@ -208,10 +207,13 @@
   .card {
     max-width: 246px;
   }
+  .btn-showMore {
+    display: none;
+  }
 }
 
 @media (max-width: 568px) {
-  .recommended .rec_container_to_center .rec_container {
+  .recommended .rec_container {
     padding: 12px;
     width: 100%;
     max-width: 425px;
@@ -223,10 +225,7 @@
 }
 
 @media (max-width: 425px) {
-  .recommended
-    .rec_container_to_center
-    .rec_container
-    .recommended-announcements {
+  .recommended .rec_container .recommended-announcements {
     gap: 0.5rem;
   }
 

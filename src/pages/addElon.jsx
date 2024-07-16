@@ -105,7 +105,6 @@ const addElon = () => {
               </div>
             </label>
             <input type="file" id="uploadImg1" className="d-none" />
-
             <label htmlFor="uploadImg2">
               <div>
                 <i class="bx bx-camera"></i>

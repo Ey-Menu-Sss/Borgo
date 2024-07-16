@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -9,6 +9,15 @@ import { useLocation, useParams, Link } from "react-router-dom";
 
 const filter = () => {
   const { param1, param2 } = useParams();
+
+  const [emptydisplay, setEmptyDisplay] = useState("d-none");
+  const [loadingdisplay, setLoadingDisplay] = useState("flex");
+  useEffect(() => {
+    setTimeout(() => {
+      setEmptyDisplay("d-block");
+      setLoadingDisplay("d-none");
+    }, 500);
+  });
 
   return (
     <div className="filter-page">
@@ -27,13 +36,14 @@ const filter = () => {
             <span>{param2}</span>
           </div>
         </div>
-        <div className="not-founded">
-          <h1>Hech narsa topilmadi!</h1>
+        <h2 className={`empty ${emptydisplay}`}>Hech narsa topilmadi!</h2>
+        <div className={`${loadingdisplay} justify-center`}>
+          <div className="loading"></div>
         </div>
         {/* <Card/>  */}
       </div>
       <Footer />
-      <HeaderToPhones/>
+      <HeaderToPhones />
     </div>
   );
 };
